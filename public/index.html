@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MartinsNewsLetter</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Martin's Newsletter</h1>
+      <p>Weekly notes on things I learned — sent straight to your inbox.</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Subscribe a friend</h2>
+        <form id="subscribe-form">
+          <label>
+            Name <span class="muted">(optional)</span>
+            <input type="text" id="sub-name" placeholder="Ada Lovelace" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="sub-email" placeholder="ada@example.com" required />
+          </label>
+          <button type="submit">Add subscriber</button>
+        </form>
+        <p id="subscribe-status" class="status" role="status"></p>
+
+        <h3>Subscribers (<span id="sub-count">0</span>)</h3>
+        <ul id="subscriber-list" class="list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Compose &amp; send an issue</h2>
+        <form id="issue-form">
+          <label>
+            Subject
+            <input type="text" id="issue-subject" placeholder="What I learned this week" required />
+          </label>
+          <label>
+            Body
+            <textarea id="issue-body" rows="8" placeholder="This week I learned..." required></textarea>
+          </label>
+          <button type="submit">Send to all subscribers</button>
+        </form>
+        <p id="issue-status" class="status" role="status"></p>
+
+        <h3>Sent issues (<span id="issue-count">0</span>)</h3>
+        <ul id="issue-list" class="list"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
