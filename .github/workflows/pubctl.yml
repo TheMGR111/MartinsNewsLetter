@@ -1,7 +1,0 @@
-name: pubctl
-on: [push]
-jobs:
-  p:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo public-ok
